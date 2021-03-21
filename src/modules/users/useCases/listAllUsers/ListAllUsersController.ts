@@ -12,7 +12,6 @@ class ListAllUsersController {
 
   handle(request: Request, response: Response): Response {
     const { user_id } = <IHeaders>request.headers;
-    console.log(user_id);
 
     try {
       const users = this.listAllUsersUseCase.execute({ user_id });
